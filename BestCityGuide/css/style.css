@@ -24,8 +24,13 @@ a {
 }
 
 h2,
-h3 {
+h3,
+h4 {
 	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
 }
 
 a {
@@ -34,6 +39,24 @@ a {
 
 img {
 	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+  position: relative;
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;	
+	background: rgba(19,43,102, .85);
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* ================================= 
@@ -51,22 +74,22 @@ img {
 	margin-top: 5px;
 }
 
-.name a,
-.main-nav a {
-	text-align: center;
-	display: block;
-	padding: 10px 15px;
-}
+	.name a,
+	.main-nav a {
+		display: block;
+		text-align: center;
+		padding: 10px 15px;
+	}
+	
+	.main-nav a {
+		font-size: .95em;
+		color: #3acec2;
+		text-transform: uppercase;
+	}
 
-.main-nav a {
-	font-size: .95em;
-	color: #3acec2;
-	text-transform: uppercase;
-}
-
-.main-nav a:hover {
-	color: #093a58;
-}
+	.main-nav a:hover {
+		color: #093a58;
+	}
 
 /* ---- Layout Containers ---- */
 
@@ -108,13 +131,34 @@ img {
 	margin-bottom: 0;
 }
 
+.icon-location{
+  width: 35px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 2;
+}
+
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
 
-	.container {
+body {
+  padding-top: 68px;
+}
+
+.main-header {
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}	
+
+.container {
 		width: 90%;
 		margin: 0 auto;
 	}
